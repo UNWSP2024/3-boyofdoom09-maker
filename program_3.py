@@ -13,7 +13,17 @@ def weight_conversion(weight):
     # Calculate the shipping charge.
     shippingCost = 0.0
     ######################
-    # WRITE YOUR CODE HERE
+    objectweight = input('What is the weight of the item you wish to ship in pounds?:')
+    objectweight = float(objectweight)
+    if objectweight <= 2:
+        print('the price for shipping is:',  objectweight * 1.50)
+    elif 2 < objectweight < 6:
+        print('The price for shipping is:', objectweight * 3.00)    
+    elif 6 <= objectweight < 10: 
+        print('The price for shipping is:', objectweight * 4.00)
+    else:
+        print('The price for shipping is:', objectweight * 4.75)
+        
     ######################
     
     return shippingCost
